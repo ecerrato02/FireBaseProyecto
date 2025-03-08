@@ -15,6 +15,7 @@ import com.example.firebaseproyecto.databinding.FragmentLoginRegisterBinding
 
 class LoginRegister : Fragment() {
     private val viewModel: LoginRegistreViewModel by viewModels()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

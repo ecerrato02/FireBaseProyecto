@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav"
     app:startDestination="@id/loginRegister">
     <fragment
         android:id="@+id/juegosFragment"
         android:name="com.example.firebaseproyecto.JuegosFragment"
-        android:label="JuegosFragment" />
+        android:label="JuegosFragment" >
+        <action
+            android:id="@+id/action_juegosFragment_to_actualizarJuegoFragment"
+            app:destination="@id/actualizarJuegoFragment"
+            app:popUpTo="@id/juegosFragment" />
+    </fragment>
     <fragment
         android:id="@+id/loginRegister"
         android:name="com.example.firebaseproyecto.LoginRegister"
@@ -16,4 +22,9 @@
             app:destination="@id/juegosFragment"
             app:popUpTo="@id/loginRegister" />
     </fragment>
+    <fragment
+        android:id="@+id/actualizarJuegoFragment"
+        android:name="com.example.firebaseproyecto.ActualizarJuegoFragment"
+        android:label="fragment_actualizar_juego"
+        tools:layout="@layout/fragment_actualizar_juego" />
 </navigation>
