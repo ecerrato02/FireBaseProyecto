@@ -11,7 +11,13 @@
         <action
             android:id="@+id/action_juegosFragment_to_actualizarJuegoFragment"
             app:destination="@id/actualizarJuegoFragment"
-            app:popUpTo="@id/juegosFragment" />
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_juegosFragment_to_loginRegister"
+            app:destination="@id/loginRegister" />
+        <action
+            android:id="@+id/action_juegosFragment_to_crearJuegoFragment"
+            app:destination="@id/crearJuegoFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginRegister"
@@ -20,11 +26,24 @@
         <action
             android:id="@+id/action_loginRegister_to_juegosFragment"
             app:destination="@id/juegosFragment"
-            app:popUpTo="@id/loginRegister" />
+            app:popUpToInclusive="true" />
     </fragment>
     <fragment
         android:id="@+id/actualizarJuegoFragment"
-        android:name="com.example.firebaseproyecto.ActualizarJuegoFragment"
+        android:name="com.example.firebaseproyecto.ActualizarEliminarJuegoFragment"
         android:label="fragment_actualizar_juego"
-        tools:layout="@layout/fragment_actualizar_juego" />
+        tools:layout="@layout/fragment_actualizar_juego" >
+        <action
+            android:id="@+id/action_actualizarJuegoFragment_to_juegosFragment"
+            app:destination="@id/juegosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/crearJuegoFragment"
+        android:name="com.example.firebaseproyecto.CrearJuegoFragment"
+        android:label="fragment_crear_juego"
+        tools:layout="@layout/fragment_crear_juego" >
+        <action
+            android:id="@+id/action_crearJuegoFragment_to_juegosFragment"
+            app:destination="@id/juegosFragment" />
+    </fragment>
 </navigation>

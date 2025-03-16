@@ -1,13 +1,11 @@
 package com.example.firebaseproyecto.Data
 
-import android.content.ContentValues.TAG
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
-
 
 class JuegosViewModel : ViewModel() {
     private val db = Firebase.firestore

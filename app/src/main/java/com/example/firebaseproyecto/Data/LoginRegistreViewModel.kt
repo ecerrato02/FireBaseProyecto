@@ -20,10 +20,10 @@ class LoginRegistreViewModel: ViewModel() {
         auth.createUserWithEmailAndPassword(correo, contrasena)
             .addOnCompleteListener() { task ->
                 if (task.isSuccessful) {
-                    Log.d("FirebaseAuth", "Usuario creado exitosamente")
+                    Log.d("FIREBASE BIEN", "Usuario creado exitosamente")
                     Toast.makeText(ctx, "Usuario creado exitosamente", Toast.LENGTH_LONG).show()
                 } else {
-                    Log.e("FirebaseAuth", "Error al crear usuario", task.exception)
+                    Log.e("FIREBASERROR", "Error al crear usuario", task.exception)
                     Toast.makeText(ctx, "Error: ${task.exception?.message}", Toast.LENGTH_LONG).show()
                 }
             }
@@ -34,12 +34,12 @@ class LoginRegistreViewModel: ViewModel() {
         auth.signInWithEmailAndPassword(correo, contrasena)
             .addOnCompleteListener() { task ->
                 if (task.isSuccessful) {
-                    Log.d(TAG, "signInWithEmail:success")
+                    Log.d("INICO SESIÓN BIEN", "signInWithEmail:success")
                     Toast.makeText(ctx, "Sesión iniciada, " + correo, Toast.LENGTH_SHORT,).show()
                     navigation.navigate(R.id.action_loginRegister_to_juegosFragment)
                 } else {
-                    Log.w(TAG, "signInWithEmail:failure", task.exception)
-                    Toast.makeText(ctx, "Authentication failed.", Toast.LENGTH_SHORT,).show()
+                    Log.w("INICIO SESIÓN ERROR", "Error al iniciar sesión", task.exception)
+                    Toast.makeText(ctx, "Fallo al verificar", Toast.LENGTH_SHORT,).show()
                 }
             }
     }

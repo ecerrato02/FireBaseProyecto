@@ -20,7 +20,6 @@ class JuegosFragment : Fragment() {
 
     private val viewModel: JuegosViewModel by viewModels()
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         viewModel.getJuegos()
@@ -39,7 +38,7 @@ class JuegosFragment : Fragment() {
 
 
         binding.buttonActualitzar.setOnClickListener {
-            findNavController().navigate(R.id.action_juegosFragment_to_actualizarJuegoFragment)
+            findNavController().navigate(R.id.action_juegosFragment_to_crearJuegoFragment)
         }
         viewModel.juegos.observe(viewLifecycleOwner){
             val adapter = JuegosAdapter(viewModel.juegos.value!!)

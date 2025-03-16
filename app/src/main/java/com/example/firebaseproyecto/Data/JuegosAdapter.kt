@@ -7,6 +7,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.example.firebaseproyecto.Data.ActualizarEliminarViewModel
 import com.example.firebaseproyecto.Data.Juegos
 import com.example.firebaseproyecto.R
 
@@ -28,16 +29,15 @@ class JuegosAdapter(private val mList: List<Juegos>) : RecyclerView.Adapter<Jueg
         holder.textViewEdat.text = juego.precio.toString()
 
         holder.layoutPulsar.setOnClickListener{view ->
+            ActualizarEliminarViewModel.selectJuego(juego)
             view.findNavController().navigate(R.id.actualizarJuegoFragment)
         }
     }
 
-    // return the number of the items in the list
     override fun getItemCount(): Int {
         return mList.size
     }
 
-    // Holds the views for adding it to image and text
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
         val textViewNom: TextView = itemView.findViewById(R.id.nombreJuego)
         val textViewEdat: TextView = itemView.findViewById(R.id.precioJuego)

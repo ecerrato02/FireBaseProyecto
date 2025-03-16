@@ -59,20 +59,6 @@
             app:layout_constraintTop_toBottomOf="@+id/textView3"
             app:layout_constraintVertical_bias="0.211" />
 
-        <EditText
-            android:id="@+id/campoContrasena"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="text"
-            android:hint="*******"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.45"
-            app:layout_constraintStart_toEndOf="@+id/textView4"
-            app:layout_constraintTop_toBottomOf="@+id/campoCorreo"
-            app:layout_constraintVertical_bias="0.169" />
-
         <Button
             android:id="@+id/botonInicioSesion"
             android:layout_width="wrap_content"
@@ -80,10 +66,10 @@
             android:text="Iniciar Sesión"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.534"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/campoContrasena"
-            app:layout_constraintVertical_bias="0.125" />
+            app:layout_constraintVertical_bias="0.344" />
 
         <Button
             android:id="@+id/botonRegistrarse"
@@ -95,7 +81,21 @@
             app:layout_constraintHorizontal_bias="0.51"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/botonInicioSesion"
-            app:layout_constraintVertical_bias="0.128" />
+            app:layout_constraintVertical_bias="0.141" />
+
+        <EditText
+            android:id="@+id/campoContrasena"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="*******"
+            android:inputType="numberPassword"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/campoCorreo"
+            app:layout_constraintVertical_bias="0.169" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
